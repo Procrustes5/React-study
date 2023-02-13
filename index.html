@@ -23,29 +23,23 @@
   ></script>
   <script type="text/babel">
     const root = document.getElementById("root");
-    function Title() {
-      return (
-        <h3 id="title" onMouseEnter={() => console.log("mouse entered")}>
-          Hello I'm title.
-        </h3>
-      );
+    let counter = 0;
+
+    function countUp() {
+      counter++;
+      render();
     }
-    function Button() {
-      return (
-        <button
-          style={{ backgroundColor: "tomato" }}
-          onClick={() => console.log("I'm clicked")}
-        >
-          Click me
-        </button>
-      );
+
+    function render() {
+      ReactDOM.render(<Container />, root);
     }
-    const Container = (
+
+    const Container = () => (
       <div>
-        <Button></Button>
-        <Title></Title>
+        <h3>Total Counts : {counter}</h3>
+        <button onClick={countUp}>Click me</button>
       </div>
     );
-    ReactDOM.render(Container, root);
+    render();
   </script>
 </html>
