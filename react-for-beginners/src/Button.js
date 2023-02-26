@@ -1,21 +1,35 @@
-import PropTypes from "prop-types";
+
 import { useState } from "react";
 
-function Button({ text }) {
-  const [counter, setValue] = useState(0);
-  const onClick = () => setValue((prev) => prev + 1);
-  console.log("call an api");
+function Button() {
+  const [todo, setTodo] = useState("");
+  const [todos, setTodos] = useState([]);
+  const onChange = (event) => {
+    setTodo(event.target.value);
+  }
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (todo === "") {
+      return
+    }
+    setTodos((currentArray) => [todo, ...currentArray]);
+    setTodo("");
+  }
 
   return (
     <div>
-      <h1>{counter}</h1>
-      <button onClick={onClick}>{text}</button>
+      <form onSubmit={onSubmit}>
+        <h1>Hello ({todos.length})</h1>
+        <input onChange={onChange} value={todo} type="text" placeholder="Write your to do" />
+        <button>App to do</button>
+      </form>
+      <hr />
+      <ul>
+        {todos.map((item, index) => (<li key={index}>{item}</li>))}
+      </ul>
     </div>
   );
 }
 
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
-};
 
 export default Button;
