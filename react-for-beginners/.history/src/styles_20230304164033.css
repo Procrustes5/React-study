@@ -1,0 +1,18 @@
+.DetailWrap {
+    width: 100%;
+}
+
+.titleWrap {
+    width : 100%;
+    position: relative;
+}
+
+.titleText {
+    position: absolute;
+    top: 40%;
+}
+
+.titleBg {
+    object-fit: cover;
+}
+

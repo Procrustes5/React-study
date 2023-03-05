@@ -10,42 +10,24 @@
 
 
 #titleText {
+    position: absolute;
     color: whitesmoke;
-    font-size: 35px;
-    border-bottom: 10px;
-    
+    top: 0%;
+    left: 5%;
 }
 
 #detailContainer {
     position: absolute;
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     border-radius: 10px;
-    top: 5%;
+    top: 18%;
     left: 5%;
     background-color: rgb(0, 0, 0, 0.5);
-    padding: 10px;
-}
-
-#detailContainerFlex {
-    display: flex;
 }
 
 #titleBg {
     width: 100%;
     object-fit: cover;
-    height: 500px;
 }
 
-#cover {
-    border-radius: 10px;
-    height: 95%;
-}
-
-#movieDetail {
-    padding: 15px;
-}
-
-#movieText {
-    color: whitesmoke;
-}

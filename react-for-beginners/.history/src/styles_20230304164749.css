@@ -1,0 +1,33 @@
+
+#DetailWrap {
+    width: 100%;
+}
+
+#titleWrap {
+    width : 100%;
+    position: relative;
+}
+
+
+#titleText {
+    position: absolute;
+    color: whitesmoke;
+    top: 0%;
+    left: 5%;
+}
+
+#detailContainer {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    top: 18%;
+    left: 5%;
+    background-color: darkgray;
+}
+
+#titleBg {
+    width: 100%;
+    object-fit: cover;
+}
+

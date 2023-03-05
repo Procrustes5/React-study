@@ -27,7 +27,7 @@ function Detail () {
                 
                 <div id="detailContainer">
                     <h1 id="titleText">{movies.title}</h1>
-                    <div id="detailContainerFlex">
+                    <div>
                         <div>
                             <img id="cover" src={movies.medium_cover_image} />
                         </div>

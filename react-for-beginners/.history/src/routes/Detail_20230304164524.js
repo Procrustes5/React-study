@@ -24,17 +24,9 @@ function Detail () {
         {loading ? <strong>Loading...</strong> : (
             <div id="titleWrap">
                 <img id="titleBg" src={movies.background_image} />
-                
+                <h1 id="titleText">{movies.title}</h1>
                 <div id="detailContainer">
-                    <h1 id="titleText">{movies.title}</h1>
-                    <div id="detailContainerFlex">
-                        <div>
-                            <img id="cover" src={movies.medium_cover_image} />
-                        </div>
-                        <div id="movieDetail">
-                            <p id="movieText">{movies.description_intro}</p>
-                        </div>
-                    </div>    
+                    <img id="cover" src={movies.medium_cover_image} />
                 </div>
             </div>)}
     </div>

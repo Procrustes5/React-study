@@ -20,22 +20,12 @@ function Detail () {
     }, [getMovie]);
 
     return (
-    <div id="DetailWrap">
+    <div>
         {loading ? <strong>Loading...</strong> : (
             <div id="titleWrap">
+                <h1 id="titleText">{movies.title}</h1>
                 <img id="titleBg" src={movies.background_image} />
-                
-                <div id="detailContainer">
-                    <h1 id="titleText">{movies.title}</h1>
-                    <div id="detailContainerFlex">
-                        <div>
-                            <img id="cover" src={movies.medium_cover_image} />
-                        </div>
-                        <div id="movieDetail">
-                            <p id="movieText">{movies.description_intro}</p>
-                        </div>
-                    </div>    
-                </div>
+                <img id="coverImg" src={movies.medium_cover_image} />
             </div>)}
     </div>
     );
